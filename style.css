@@ -152,7 +152,8 @@ a:hover {
 /* Button styles */
 /* Button Styling */
 button,
-.contact-button {
+.contact-button,
+.cta-button {
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     padding: 10px 32px;
@@ -395,6 +396,36 @@ picture,
 .testimonial-item img {
     display: block;
     margin: 32px auto 0;
+}
+
+.cta {
+    padding: 76px 58px;
+    background-color: var(--primary-color-2);
+}
+
+.cta .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cta h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--secondary-color-4);
+    margin-left: 98px;
+}
+
+.cta-button {
+    border-color: var(--primary-color-3);
+    color: var(--primary-color-3);
+    margin-right: 98px;
+}
+
+.cta-button:hover {
+    border: 2px solid var(--secondary-color-4);
+    background-color: var(--secondary-color-4);
+    color: var(--primary-color-3);
 }
 
 @media (max-width: 768px) {
