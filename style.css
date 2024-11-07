@@ -1,0 +1,496 @@
+/* General Reset and Base Styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.livvic-thin {
+    font-family: "Livvic", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.livvic-extralight {
+    font-family: "Livvic", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.livvic-light {
+    font-family: "Livvic", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.livvic-regular {
+    font-family: "Livvic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.livvic-medium {
+    font-family: "Livvic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.livvic-semibold {
+    font-family: "Livvic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.livvic-bold {
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.livvic-black {
+    font-family: "Livvic", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.livvic-thin-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.livvic-extralight-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.livvic-light-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.livvic-regular-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.livvic-medium-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.livvic-semibold-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.livvic-bold-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.livvic-black-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+:root {
+    --primary-color-1: #014e56;
+    /* Midnight Green */
+    --primary-color-2: #f67e7e;
+    /* Light Coral */
+    --primary-color-3: #ffffff;
+    /* white */
+    --secondary-color-1: #79c8c7;
+    /* Rapture Blue */
+    --secondary-color-2: #2c6269;
+    /* Police Blue */
+    --secondary-color-3: #004047;
+    /* Deep Jungle Green */
+    --secondary-color-4: #012f34;
+    /* Sacramento State Green */
+    --secondary-color-5: #002529;
+    /* Dark Green */
+    --font-family: "Livvic", sans-serif;
+    --font-size-base: 18px;
+}
+
+/* Base typography styles */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    background-color: var(--primary-color-1);
+    color: var(--primary-color-3);
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+a {
+    color: var(--primary-color-3);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+li {
+    list-style: none;
+}
+
+a:hover {
+    color: var(--primary-color-2);
+}
+
+/* Button styles */
+/* Button Styling */
+button,
+.contact-button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 10px 32px;
+    border: 2px solid var(--primary-color-3);
+    border-radius: 24px;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+.contact-button:hover {
+    background-color: var(--primary-color-3);
+    color: var(--primary-color-1);
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+.header {
+    margin-top: 73px;
+}
+
+.header .container,
+.hero .container,
+.features .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    gap: 80px;
+    align-items: start;
+}
+
+.header nav ul {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+picture,
+.logo,
+.logo img {
+    display: inline-block;
+    height: 32px;
+}
+
+.hero {
+    margin: 129px 0 250px;
+}
+
+.hero h1 {
+    font-size: 100px;
+    line-height: 100px;
+    text-align: start;
+    max-width: 620px;
+    width: 100%;
+}
+
+.hero h1 span {
+    color: var(--primary-color-2);
+}
+
+.rectangle-line {
+    width: 50px;
+    height: 4px;
+    background-color: var(--secondary-color-1);
+}
+
+.hero-right,
+.features-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero p {
+    max-width: 445px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+/*FEATURES */
+
+.features {
+    background-color: var(--secondary-color-4);
+    padding-block: 140px;
+}
+
+.features .rectangle-line {
+    background-color: var(--primary-color-2);
+}
+
+.features-left {
+    gap: 54px;
+    justify-content: flex-start;
+}
+
+.features h2,
+.testimonials h2 {
+    max-width: 445px;
+    width: 100%;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+/* Features section styling */
+.features-items {
+    display: grid;
+    gap: 2rem;
+    padding-top: 58px;
+    grid-template-rows: repeat(auto-fit, minmax(94px, 1fr));
+    max-width: 540px;
+    width: 100%;
+    justify-items: flex-start;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.feature-icon img {
+    width: 72px;
+    height: 72px;
+    display: block;
+}
+
+.feature-content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--primary-color-2);
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    color: var(--primary-color-3);
+}
+
+/* Accessibility and SEO optimization */
+.feature-icon img[alt=""] {
+    aria-hidden: true;
+}
+
+
+/* TESTIMONIALS */
+
+.testimonials {
+    padding-block: 140px;
+}
+
+.testimonials .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+}
+
+.testimonials h2 {
+    max-width: 932px;
+    width: 100%;
+    text-align: center;
+}
+
+.testimonials h2 span {
+    color: var(--secondary-color-1);
+}
+
+.testimonial-items {
+    width: 100%;
+    max-width: 1180px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr))
+}
+
+.testimonial-item {
+    position: relative;
+    text-align: center;
+}
+
+.testimonial-item::before {
+    content: url(./images/double-quotation.svg);
+    position: absolute;
+    z-index: -1;
+    top: -32px;
+    left: 40%;
+}
+
+.testimonial-item blockquote {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.testimonial-item p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--secondary-color-1);
+    text-align: center;
+}
+
+.testimonial-item span {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.testimonial-item img {
+    display: block;
+    margin: 32px auto 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .header-left {
+        gap: 40px;
+    }
+
+    .header nav ul {
+        gap: 15px;
+        padding: 0;
+    }
+
+    .header {
+        margin-top: 64px;
+    }
+
+    .hero {
+        margin-top: 112px;
+    }
+
+    .hero h1 {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 56px;
+        text-align: center;
+        max-width: 395px;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .rectangle-line {
+        display: none;
+    }
+
+    .hero p {
+        max-width: 457px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .features {
+        padding: 100px 58px;
+    }
+
+    .features .container {
+        flex-direction: column;
+    }
+
+    .features .rectangle-line {
+        display: block;
+    }
+
+    .features-left {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 565px) {
+    .hamburger-menu {
+        display: inline-block;
+    }
+
+    .header nav,
+    .contact-button {
+        display: none;
+    }
+
+    .header {
+        margin-top: 48px;
+    }
+
+    .hero {
+        margin-top: 80px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 40px;
+        text-align: center;
+        max-width: 327px;
+    }
+
+    .hero .container {
+        gap: 18px;
+    }
+
+    .hero p {
+        max-width: 327px;
+    }
+}
