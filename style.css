@@ -228,6 +228,14 @@ picture,
     text-align: start;
     max-width: 620px;
     width: 100%;
+    position: relative;
+}
+
+.hero h1::before {
+    content: url(./images/hero-asset1.svg);
+    position: absolute;
+    left: -265px;
+    /* mask-image: linear-gradient(to left, black 50%, transparent 50%) */
 }
 
 .hero h1 span {
@@ -245,6 +253,15 @@ picture,
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+}
+
+.hero-right::after {
+    content: url(./images/hero-asset-2.svg);
+    position: absolute;
+    top: 350px;
+    z-index: -1;
+
 }
 
 .hero p {
@@ -260,6 +277,14 @@ picture,
 .features {
     background-color: var(--secondary-color-4);
     padding-block: 140px;
+}
+
+.features-left::before {
+    content: url(./images/features-asset1.svg);
+    position: absolute;
+    right: -860px;
+    bottom: -145px;
+    z-index: 0;
 }
 
 .features .rectangle-line {
@@ -359,6 +384,12 @@ picture,
 .testimonial-item {
     position: relative;
     text-align: center;
+}
+
+.testimonial-item img {
+    display: block;
+    width: 62px;
+    height: 62px;
 }
 
 .testimonial-item::before {
