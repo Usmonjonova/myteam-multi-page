@@ -668,6 +668,106 @@ picture,
 }
 
 
+
+
+/* CONTACT PAGE */
+
+#main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: 120px;
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    width: 100%;
+}
+
+#contact-title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 100px;
+    margin-bottom: 16px;
+}
+
+.contact-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    color: var(--primary-color-2);
+    margin-bottom: 32px;
+}
+
+.feature-icon-text {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.feature-icon-text p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.contact-form-section {
+    max-width: 540px;
+    width: 100%;
+}
+
+.contact-form-section label {
+    display: none;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0 81px 17px 14px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--primary-color-3);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.12px;
+    color: var(--primary-color-3);
+    font-family: "Livvic",
+        sans-serif;
+    cursor: pointer;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form input:active,
+.contact-form textarea:active,
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-bottom: 1px solid var(--secondary-color-1);
+}
+
+textarea {
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-button {
+    align-self: flex-start;
+}
+
 @media (max-width: 1200px) {
 
     .cta h2,
@@ -773,6 +873,20 @@ picture,
         z-index: -1;
         top: 250px;
         left: 0;
+    }
+
+    #main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #main-content h1,
+    #main-content h2 {
+        text-align: center;
+    }
+
+    .icon-section {
+        margin-bottom: 64px;
     }
 }
 
