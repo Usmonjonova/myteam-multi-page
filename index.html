@@ -7,7 +7,9 @@
       name="description"
       content="Find the best talent and build high-performing distributed teams."
     />
+
     <title>MyTeam | Find the Best Talent</title>
+
     <!-- SEO Meta Tags -->
     <meta property="og:title" content="MyTeam | Find the Best Talent" />
     <meta
@@ -16,31 +18,34 @@
     />
     <meta property="og:image" content="path/to/social-share-image.jpg" />
     <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./images/features1.svg" />
+
+    <!-- Fonts: Optimize Loading -->
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Livvic:wght@100;200;300;400;500;600;700;900&display=swap"
-      as="style"
-      onload="this.rel='stylesheet'"
+      href="fonts/Livvic-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
     />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Livvic:wght@100;200;300;400;500;600;700;900&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
+    <link
+      rel="preload"
+      href="fonts/Livvic-Bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
 
-    <link rel="icon" href="./images/features1.svg" />
     <!-- Stylesheet Link -->
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
     <!-- Header -->
     <header class="header">
       <div class="container">
         <div class="header-left">
-          <a href="/" class="logo">
+          <a href="/" class="logo" aria-label="MyTeam logo">
             <picture>
               <source
                 media="(min-width: 1200px)"
@@ -59,29 +64,32 @@
           </a>
           <nav aria-label="Main navigation">
             <ul class="nav-list">
-              <li><a href="#home" class="nav-link">home</a></li>
-              <li><a href="pages/about.html" class="nav-link">about</a></li>
+              <li><a href="#home" class="nav-link">Home</a></li>
+              <li><a href="pages/about.html" class="nav-link">About</a></li>
             </ul>
           </nav>
         </div>
-        <a href="./pages/contact.html" class="contact-button">contact us</a>
-        <img
-          class="hamburger-menu"
-          src="./images/hamburger-menu.svg"
-          alt="hamburger-menu"
-        />
+        <a
+          href="./pages/contact.html"
+          class="contact-button"
+          aria-label="Contact us page"
+          >Contact Us</a
+        >
+        <button class="hamburger-menu" aria-label="Open navigation menu">
+          <img src="./images/hamburger-menu.svg" alt="hamburger-menu icon" />
+        </button>
       </div>
-      <div class="modal-menu"></div>
+      <div class="modal-menu" aria-hidden="true"></div>
     </header>
 
     <!-- Main Content -->
     <main id="main-content">
       <!-- Hero Section -->
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-heading">
         <div class="container">
-          <h1>Find the best <span>talent</span></h1>
+          <h1 id="hero-heading">Find the best <span>talent</span></h1>
           <div class="hero-right">
-            <div class="rectangle-line"></div>
+            <div class="rectangle-line" aria-hidden="true"></div>
             <p>
               Finding the right people and building high-performing teams can be
               hard. Most companies aren’t tapping into the abundance of global
@@ -92,16 +100,18 @@
       </section>
 
       <!-- Features Section -->
-      <section class="features">
+      <section class="features" aria-labelledby="features-heading">
         <div class="container">
           <div class="features-left">
-            <div class="rectangle-line"></div>
-            <h2>Build & manage distributed teams like no one else.</h2>
+            <div class="rectangle-line" aria-hidden="true"></div>
+            <h2 id="features-heading">
+              Build & manage distributed teams like no one else.
+            </h2>
           </div>
-          <div class="features-items" aria-labelledby="features-heading">
+          <div class="features-items">
             <div class="feature">
               <div class="feature-icon" aria-hidden="true">
-                <img src="./images/features1.svg" alt="feature-item-1" />
+                <img src="./images/features1.svg" alt="" />
               </div>
               <div class="feature-content">
                 <h3 class="feature-title">Experienced Individuals</h3>
@@ -113,7 +123,7 @@
             </div>
             <div class="feature">
               <div class="feature-icon" aria-hidden="true">
-                <img src="./images/features2.svg" alt="feature-item-2" />
+                <img src="./images/features2.svg" alt="" />
               </div>
               <div class="feature-content">
                 <h3 class="feature-title">Easy to Implement</h3>
@@ -125,7 +135,7 @@
             </div>
             <div class="feature">
               <div class="feature-icon" aria-hidden="true">
-                <img src="./images/features3.svg" alt="feature-item-3" />
+                <img src="./images/features3.svg" alt="" />
               </div>
               <div class="feature-content">
                 <h3 class="feature-title">Enhanced Productivity</h3>
@@ -140,9 +150,9 @@
       </section>
 
       <!-- Testimonials Section -->
-      <section class="testimonials">
+      <section class="testimonials" aria-labelledby="testimonials-heading">
         <div class="container">
-          <h2>
+          <h2 id="testimonials-heading">
             Delivering real results for top companies. Some of our
             <span>success stories.</span>
           </h2>
@@ -153,12 +163,9 @@
                 focused on the most essential features helping us launch the
                 platform eight months faster than planned.”
               </blockquote>
-              <p>Kady Baker</p>
+              <p class="testimonial-author">Kady Baker</p>
               <span>Product Manager at Bookmark</span>
-              <img
-                src="./images/avatar1.svg"
-                alt="Kady Baker - Product Manager at Bookmark"
-              />
+              <img src="./images/avatar1.svg" alt="Kady Baker" />
             </article>
             <article class="testimonial-item">
               <blockquote>
@@ -166,12 +173,9 @@
                 came in and built out the whole journey. Since going live, user
                 retention has gone through the roof!”
               </blockquote>
-              <p>Aiysha Reese</p>
+              <p class="testimonial-author">Aiysha Reese</p>
               <span>Founder of Manage</span>
-              <img
-                src="./images/avatar2.svg"
-                alt="Aiysha Reese - Founder of Manage"
-              />
+              <img src="./images/avatar2.svg" alt="Aiysha Reese" />
             </article>
             <article class="testimonial-item">
               <blockquote>
@@ -179,37 +183,34 @@
                 experience for hiring a physio. The launch was an instant
                 success with 100k downloads in the first month.”
               </blockquote>
-              <p>Arthur Clarke</p>
+              <p class="testimonial-author">Arthur Clarke</p>
               <span>Co-founder of MyPhysio</span>
-              <img
-                src="./images/avatar3.svg"
-                alt="Arthur Clarke - Co-founder of MyPhysio"
-              />
+              <img src="./images/avatar3.svg" alt="Arthur Clarke" />
             </article>
           </div>
         </div>
       </section>
 
       <!-- Call to Action Section -->
-      <section class="cta">
+      <section class="cta" aria-labelledby="cta-heading">
         <div class="container">
-          <h2>Ready to get started?</h2>
-          <a href="#contact" class="cta-button">contact us</a>
+          <h2 id="cta-heading">Ready to get started?</h2>
+          <a href="#contact" class="cta-button">Contact Us</a>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" aria-labelledby="footer-heading">
       <div class="container">
         <div class="footer-logo-nav">
-          <a href="/" class="logo">
-            <img src="./images/myteam-logo.svg" alt="myteam-logo" />
+          <a href="/" class="logo" aria-label="MyTeam logo">
+            <img src="./images/myteam-logo.svg" alt="MyTeam logo" />
           </a>
           <nav aria-label="Footer navigation">
             <ul class="footer-nav">
-              <li><a href="#home" class="footer-link">home</a></li>
-              <li><a href="about.html" class="footer-link">about</a></li>
+              <li><a href="#home" class="footer-link">Home</a></li>
+              <li><a href="about.html" class="footer-link">About</a></li>
             </ul>
           </nav>
         </div>
@@ -221,17 +222,17 @@
         </address>
         <div class="social-links-rights">
           <div class="social-links">
-            <a href="#" aria-label="Facebook"
-              ><img src="./images/facebookk.svg" alt="Facebook"
-            /></a>
-            <a href="#" aria-label="Pinterest"
-              ><img src="./images/pinterest.svg" alt="Pinterest"
-            /></a>
-            <a href="#" aria-label="Twitter"
-              ><img src="./images/twitter.svg" alt="Twitter"
-            /></a>
+            <a href="#" aria-label="Facebook">
+              <img src="./images/facebookk.svg" alt="Facebook" />
+            </a>
+            <a href="#" aria-label="Pinterest">
+              <img src="./images/pinterest.svg" alt="Pinterest" />
+            </a>
+            <a href="#" aria-label="Twitter">
+              <img src="./images/twitter.svg" alt="Twitter" />
+            </a>
           </div>
-          <p>Copyright 2020. All Rights Reserved</p>
+          <p>&copy; 2020 MyTeam. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
